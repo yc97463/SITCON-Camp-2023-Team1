@@ -1,0 +1,235 @@
+{
+  "competitions": [
+    {
+      "title": "城市盃程式競賽 第一屆",
+      "date": "2023-12-31",
+      "prize": 20000,
+      "exp": null,
+      "min_age": 12,
+      "max_age": 999,
+      "category": "資訊",
+      "url": "https://www.google.com",
+      "id": "1111"
+    },
+    {
+      "title": "Thy Painter 高中生繪畫挑戰",
+      "date": "2023-10-28",
+      "prize": 30000,
+      "exp": "高中職",
+      "min_age": 0,
+      "max_age": 999,
+      "category": "繪畫",
+      "url": "https://www.google.com",
+      "id": "2222"
+    },
+    {
+      "title": "CalliCon書法競賽 第貳屆",
+      "date": "2023-9-7",
+      "prize": 3000,
+      "exp": null,
+      "min_age": 0,
+      "max_age": 18,
+      "category": "語文",
+      "url": "https://www.google.com",
+      "id": "3333"
+    },
+    {
+      "title": "青壯年攝影大賞",
+      "date": "2023-11-7",
+      "prize": 10000,
+      "exp": null,
+      "min_age": 30,
+      "max_age": 999,
+      "category": "攝影",
+      "url": "https://www.google.com",
+      "id": "4444"
+    },
+    {
+      "title": "中學生特技單車錦標賽",
+      "date": "2023-10-10",
+      "prize": 8000,
+      "exp": "國中",
+      "min_age": 12,
+      "max_age": 15,
+      "category": "其他",
+      "url": "https://www.google.com",
+      "id": "5555"
+    },
+    {
+      "title": "我要駭死你搶旗賽 第四屆",
+      "date": "2023-8-16",
+      "prize": 20000,
+      "exp": null,
+      "min_age": 0,
+      "max_age": 999,
+      "category": "資訊",
+      "url": "https://www.google.com",
+      "id": "6666"
+    },
+    {
+      "title": "World Motion Design Competition 11th",
+      "date": "2023-11-11",
+      "prize": 100000,
+      "exp": null,
+      "min_age": 0,
+      "max_age": 999,
+      "category": "設計",
+      "url": "https://www.google.com",
+      "id": "7777"
+    },
+    {
+      "title": "生科領域論文投稿競賽",
+      "date": "2024-6-9",
+      "prize": 50000,
+      "exp": "學士",
+      "min_age": 18,
+      "max_age": 999,
+      "category": "生物",
+      "url": "https://www.google.com",
+      "id": "8888"
+    },
+    {
+      "title": "進擊的總編輯養成之路—從文藝青年跨界到健康管理師，我如何經營全台最年輕的健康資訊平台「潮健康」",
+      "date": "2023-08-22",
+      "prize": null,
+      "exp": null,
+      "min_age": 0,
+      "max_age": 999,
+      "category": "其他",
+      "url": "https://www.accupass.com/event/2306260611101356611169",
+      "id": "4c5a1a8d7887326df40c272d10f8eaeeadf2bc69ded3711148036b16697bcad5"
+    },
+    {
+      "title": "【獎學金】2023 蘇黎世聯邦理工學院博士後獎學金",
+      "date": "2024-01-01",
+      "prize": null,
+      "exp": null,
+      "min_age": 0,
+      "max_age": 999,
+      "category": "其他",
+      "url": "https://reurl.cc/eDnWkQ",
+      "id": "8c18060b20465691c0e49a13507b0554e5831071348b176260010d354b535547"
+    },
+    {
+      "title": "【獎學金】Tongarewa 獎學金",
+      "date": "2023-09-01",
+      "prize": null,
+      "exp": null,
+      "min_age": 0,
+      "max_age": 999,
+      "category": "其他",
+      "url": "https://reurl.cc/Rz85Ze",
+      "id": "2df9e2bd015bab1859768d7ec017ac98ea5e4d78b55119a19429671a95310c35"
+    },
+    {
+      "title": "【競賽活動】 2023年教科文組織青年行動攝影大賽",
+      "date": "2023-08-15",
+      "prize": null,
+      "exp": null,
+      "min_age": 0,
+      "max_age": 999,
+      "category": "其他",
+      "url": "https://reurl.cc/8jzpa4",
+      "id": "de1b2d5626b1f213a46967e49cd1368c9e2d2aca5a1aec31dbcdb2d2175d8176"
+    },
+    {
+      "title": "在社創領域中開闢路徑，我如何在解決社會隱性痛點中見樹又見林？—好好星球執行長張希慈的利他職涯學",
+      "date": "2023-08-16",
+      "prize": null,
+      "exp": null,
+      "min_age": 0,
+      "max_age": 999,
+      "category": "其他",
+      "url": "https://www.accupass.com/event/2306280636205307765450",
+      "id": "a17e6db55ba3af686c765e85e3ecd3ada39376b649ba56c6a0f4bbe9df8adb28"
+    },
+    {
+      "title": "【獎學金】2023 Waikato 大學優秀國家生獎學金",
+      "date": "2023-08-19",
+      "prize": null,
+      "exp": null,
+      "min_age": 0,
+      "max_age": 999,
+      "category": "其他",
+      "url": "https://reurl.cc/qLo5zE",
+      "id": "c56b5a1b091c8d790d3a64c2bc66ea17b4362411d6af9952a9cca3d1f8419d5d"
+    },
+    {
+      "title": "2023全球青年趨勢論壇參與青年招募",
+      "date": "2023-11-11",
+      "prize": null,
+      "exp": null,
+      "min_age": 0,
+      "max_age": 999,
+      "category": "其他",
+      "url": "https://iyouth.youthhub.tw/SignUpContent.php?sID=124&secureChk=6eaedc7f552a20ac5eea537ea4aaddac",
+      "id": "fbacfdbc218c0cbf8ee94009b7c609dfad89f79063e6c9d0d4ebf45b08905819"
+    },
+    {
+      "title": "【Skyline】第十一屆校園大使招募",
+      "date": "2023-09-18",
+      "prize": null,
+      "exp": null,
+      "min_age": 0,
+      "max_age": 999,
+      "category": "其他",
+      "url": "https://skyline.tw/activity/11thambassador",
+      "id": "23bbd510856f66e78efd8d5fba017a1dcd23792b79ae12a9f9d918c0f56dc65e"
+    },
+    {
+      "title": "【實習計畫】2023 WYA 認證培訓計畫",
+      "date": "2023-09-03",
+      "prize": null,
+      "exp": null,
+      "min_age": 0,
+      "max_age": 999,
+      "category": "其他",
+      "url": "https://reurl.cc/GAQXvA",
+      "id": "6fbd346b1d1cd8a42fe65666383a8e5c07c7ee916af24ad9c9031484b3337177"
+    },
+    {
+      "title": "【補助計畫】2024 哈佛學術學者計畫",
+      "date": "2024-08-01",
+      "prize": null,
+      "exp": null,
+      "min_age": 0,
+      "max_age": 999,
+      "category": "其他",
+      "url": "https://reurl.cc/EoWrqA",
+      "id": "1b3d6f46fc6a3a1bd6ece8727fc0807af309768abac3a966ff3c8bb3fa559252"
+    },
+    {
+      "title": "【競賽活動】2023 年麥肯錫未來領袖獎",
+      "date": "2023-08-25",
+      "prize": null,
+      "exp": null,
+      "min_age": 0,
+      "max_age": 999,
+      "category": "其他",
+      "url": "https://reurl.cc/y7omEy",
+      "id": "07b8d86514030534248ba9b62e71e1a018a4ec5c0af8f9652b808673c613edb5"
+    },
+    {
+      "title": "【競賽活動】2023 青年企業冒險獎",
+      "date": "2023-08-31",
+      "prize": null,
+      "exp": null,
+      "min_age": 0,
+      "max_age": 999,
+      "category": "其他",
+      "url": "https://reurl.cc/94x14j",
+      "id": "7aa8d45bf22f06722f7bfc293c7713940323b0bfa95c0e8c947effbed573f491"
+    },
+    {
+      "title": "法務部112年全國學生犯罪預防漫畫與創意短片徵件活動",
+      "min_age": 0,
+      "max_age": 999,
+      "category": "攝影",
+      "date": "2023-09-01",
+      "prize": 100000,
+      "url": "https://www.mojgov2023.com.tw/",
+      "exp": "國小",
+      "id": "626cb22e4ec5043158a7a527e99f3dbb3a721fab9b41c4467e72e7575b3f42d8"
+    }
+  ]
+}

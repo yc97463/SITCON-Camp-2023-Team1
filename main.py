@@ -23,6 +23,7 @@ with open("secret.json", "r", encoding="utf8") as jfile:
 API_TOKEN = secret['TOKEN']
 PROFILES_INIT = {'birth': None, 'exp': None, 'category': [], 'fav': []}
 BROWSER_TRACKING_INIT = {'competition_ids': [], "index": 0}
+COMPETITIONS_INIT = []
 
 bot = telebot.TeleBot(API_TOKEN)
 infav_markup = quick_markup({
@@ -134,7 +135,7 @@ def search(message):
   pf_identifier = str(chat.id) + str(user.id)
   with JsonIOHandler("database/profiles.json", PROFILES_INIT) as handler:
     profile = handler.data[pf_identifier]
-  with JsonIOHandler("database/competitions.json") as handler:
+  with JsonIOHandler("database/competitions.json", COMPETITIONS_INIT) as handler:
     competitions = handler.data['competitions']
   
   filtered_competitions = list(filter(lambda com: utils.is_competition_matched(com, profile), handler.data['competitions']))
@@ -176,7 +177,7 @@ def browser_callback(call):
     profile = handler.data[pf_identifier]
   with JsonIOHandler('database/browser_tracking.json', BROWSER_TRACKING_INIT) as handler:
     bsr_state = handler.data[bsr_identifier]
-  with JsonIOHandler("database/competitions.json") as handler:
+  with JsonIOHandler("database/competitions.json", COMPETITIONS_INIT) as handler:
     competitions = handler.data['competitions']
 
   update_flag = True
@@ -223,7 +224,7 @@ def show_favorite(message):
   pf_identifier = str(chat.id) + str(user.id)
   with JsonIOHandler("database/profiles.json", PROFILES_INIT) as handler:
     profile = handler.data[pf_identifier]
-  with JsonIOHandler("database/competitions.json") as handler:
+  with JsonIOHandler("database/competitions.json", COMPETITIONS_INIT) as handler:
     competitions = handler.data['competitions']
   
   filtered_competitions = utils.get_fav_competitions(profile['fav'], competitions)
@@ -272,7 +273,7 @@ def run_crawler(terminal_event):
 
       if not utils.is_competition_matched(data, PROFILES_INIT):
         add_flag = False
-      with JsonIOHandler('database/competitions.json') as handler:
+      with JsonIOHandler('database/competitions.json', COMPETITIONS_INIT) as handler:
         for competition in handler.data['competitions']:
           if fingerprint == competition['id']:
             add_flag = False
@@ -298,7 +299,7 @@ def run_crawler(terminal_event):
 
       if not utils.is_competition_matched(data, PROFILES_INIT):
         add_flag = False
-      with JsonIOHandler('database/competitions.json') as handler:
+      with JsonIOHandler('database/competitions.json', COMPETITIONS_INIT) as handler:
         for competition in handler.data['competitions']:
           if fingerprint == competition['id']:
             add_flag = False
@@ -323,7 +324,7 @@ def run_crawler(terminal_event):
 def run_crawler_fake(terminal_event):
   while True:
     print('run_crawler_fake')
-    with JsonIOHandler('database/competitions.json') as handler:
+    with JsonIOHandler('database/competitions.json', COMPETITIONS_INIT) as handler:
       pass
     for _ in range(50):
       time.sleep(.1)

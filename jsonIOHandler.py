@@ -1,4 +1,5 @@
 import json
+import os
 import threading
 from collections import defaultdict
 
@@ -13,11 +14,11 @@ class JsonIOHandler():
 
   def __enter__(self):
     _rlock.acquire()
-    try:
+    if os.path.isfile(self._filename):
       with open(self._filename, 'r', encoding='utf8') as jfile:
         raw_data = json.load(jfile)
         self.data = defaultdict(self.initial_func, raw_data)
-    except FileNotFoundError:
+    else:
       self.data = defaultdict(self.initial_func, {})
     _rlock.release()
     

@@ -36,7 +36,7 @@ fav_markup = quick_markup({
   '➡️': {'callback_data': 'next'}
 }, row_width=3)
 
-with JsonIOHandler('database/profile_choices.json') as handler:
+with JsonIOHandler('profile_choices.json') as handler:
   profile_choices = handler.data
 
 # Handle '/start' and '/help'
@@ -87,11 +87,11 @@ def set_profile(message):
       data = datetime.strftime(data, '%Y-%m-%d')
     elif content[1] == 'exp':
       data = content[2]
-      with JsonIOHandler('database/profile_choices.json') as handler:
+      with JsonIOHandler('profile_choices.json') as handler:
         assert data in handler.data['exp']
     elif content[1] == 'category' and content[2] == 'add':
       data = content[3]
-      with JsonIOHandler('database/profile_choices.json') as handler:
+      with JsonIOHandler('profile_choices.json') as handler:
         assert data in handler.data['category']
       with JsonIOHandler('database/profiles.json', PROFILES_INIT) as handler:
         assert data not in handler.data[pf_identifier]['category']

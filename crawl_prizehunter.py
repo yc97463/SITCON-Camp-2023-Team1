@@ -12,7 +12,7 @@ def crawl_prizehunter():
 
         if isinstance(obj, dict):
             for key, val in obj.items():
-                if key in ('identifyLimit','title','tags','prizeTop','startTime','officialUrl','categories'):
+                if key in ('identifyLimit','title','tags','prizeTop','endTime','officialUrl','categories'):
                     result[key] = val
                 if isinstance(val, dict):
                     my_parse(val, result)
@@ -50,9 +50,9 @@ def crawl_prizehunter():
     title_dic.update(result)
 
     # 把 unix time 改為西元時間
-    startTime_value = title_dic['startTime']
-    title_dic["startTime"] = datetime.datetime.fromtimestamp(startTime_value)
-    title_dic['startTime'] = title_dic['startTime'].strftime('%Y-%m-%d')
+    endTime_value = title_dic['endTime']
+    title_dic["endTime"] = datetime.datetime.fromtimestamp(endTime_value)
+    title_dic['endTime'] = title_dic['endTime'].strftime('%Y-%m-%d')
 
     # 設定年齡
     title_dic['min_age'] = 0
@@ -85,7 +85,7 @@ def crawl_prizehunter():
     del title_dic['categories']
 
     # 改key的名字(+排各條件順序)
-    title_dic['date'] = title_dic.pop('startTime')
+    title_dic['date'] = title_dic.pop('endTime')
     title_dic['prize'] = title_dic.pop('prizeTop')
     title_dic['url'] = title_dic.pop('officialUrl')
 

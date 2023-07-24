@@ -4,7 +4,7 @@ import time
 
 def is_competition_matched(competition, profile) -> bool:
  
-  with JsonIOHandler('database/profile_choices.json') as handler:
+  with JsonIOHandler('profile_choices.json') as handler:
     profile_choices = handler.data
   now_date = datetime.now()
 

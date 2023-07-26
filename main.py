@@ -21,7 +21,7 @@ with open("secret.json", "r", encoding="utf8") as jfile:
   secret = json.load(jfile)
 
 API_TOKEN = secret['TOKEN']
-PROFILES_INIT = {'birth': None, 'exp': None, 'category': [], 'fav': []}
+PROFILES_INIT = {'birth': None, 'exp': None, 'category': [], 'fav': [], "current_bsr": None}
 BROWSER_TRACKING_INIT = {'competition_ids': [], "index": 0}
 COMPETITIONS_INIT = []
 
@@ -147,11 +147,13 @@ def search(message):
   
   msg = bot.reply_to(message, 'Loading...')
   chat = msg.chat
-  identifier = str(chat.id) + str(msg.message_id)
+  bsr_identifier = str(chat.id) + str(msg.message_id)
+  with JsonIOHandler('database/profiles.json', PROFILES_INIT) as handler:
+    handler.data[pf_identifier]["current_bsr"] = bsr_identifier
   with JsonIOHandler('database/browser_tracking.json', BROWSER_TRACKING_INIT) as handler:
     ids = [c['id'] for c in filtered_competitions]
-    handler.data[identifier]['competition_ids'] = ids
-    bsr_state = handler.data[identifier]
+    handler.data[bsr_identifier]['competition_ids'] = ids
+    bsr_state = handler.data[bsr_identifier]
 
   index = bsr_state['index']
   cur_competition_id = bsr_state['competition_ids'][index]
@@ -179,6 +181,13 @@ def browser_callback(call):
     bsr_state = handler.data[bsr_identifier]
   with JsonIOHandler("database/competitions.json", COMPETITIONS_INIT) as handler:
     competitions = handler.data['competitions']
+
+  # deny access to previous browsers
+  if not profile['current_bsr'] == bsr_identifier:
+    bot.edit_message_text(text="[這個頁面已失效]",
+                          chat_id=call.message.chat.id,
+                          message_id=call.message.message_id)
+    return
 
   update_flag = True
   if call.data.startswith('fav'):
@@ -237,6 +246,8 @@ def show_favorite(message):
   msg = bot.reply_to(message, 'Loading...')
   chat = msg.chat
   bsr_identifier = str(chat.id) + str(msg.message_id) 
+  with JsonIOHandler('database/profiles.json', PROFILES_INIT) as handler:
+    handler.data[pf_identifier]["current_bsr"] = bsr_identifier
   with JsonIOHandler('database/browser_tracking.json', BROWSER_TRACKING_INIT) as handler:
     ids = [c['id'] for c in filtered_competitions]
     handler.data[bsr_identifier]['competition_ids'] = ids

@@ -155,6 +155,7 @@ cython_debug/
 # custom
 secret.json
 .venv/**
+tutorial-env/
 
 database/browser_tracking.json
 database/competitions.json
